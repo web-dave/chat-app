@@ -3,11 +3,13 @@ import { IMsg } from '../app.component';
 
 @Component({
   selector: 'app-msg',
-  templateUrl: './msg.component.html',
-  styleUrls: ['./msg.component.scss'],
+  template: ` <div class="container">
+    <p>{{ message.msg }}</p>
+    <span class="time-right">{{ message.name }}</span>
+  </div>`,
 })
 export class MsgComponent implements OnInit {
-  @Input() message: IMsg = { name: '', msg: '' };
+  message: IMsg = { name: 'Dave', msg: 'Moin loide' };
   constructor() {}
 
   ngOnInit(): void {}
