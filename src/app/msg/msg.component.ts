@@ -9,7 +9,7 @@ import { IMsg } from '../app.component';
   </div>`,
 })
 export class MsgComponent implements OnInit {
-  message: IMsg = { name: 'Dave', msg: 'Moin loide' };
+  @Input() message: IMsg = { name: 'Dave', msg: 'Moin loide' };
   constructor() {}
 
   ngOnInit(): void {}
