@@ -1,4 +1,6 @@
 <h2>Chat Messages</h2>
+<button (click)="login()">Login</button>
+<h2 *ngFor="let nutzer of items$ | async">{{ nutzer.name }}</h2>
 <div class="stream" #stream>
   <app-msg *ngFor="let msg of messages" [message]="msg"></app-msg>
 </div>
